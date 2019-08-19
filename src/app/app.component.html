@@ -1,13 +1,8 @@
-<app-header></app-header>
+<article class="global">
+  <app-header></app-header>
 
-<div style="text-align:center">
-  <h1 >
-    Welcome to {{ "TITLE" | translate }}!
-  </h1>
-  <div>
-    <img class="col-3" src="../assets/img/Definitivonaranjaill.png">
-  </div>
+  <main class="">
+    <router-outlet></router-outlet>
+  </main>
 
-</div>
-
-<router-outlet></router-outlet>
+</article>

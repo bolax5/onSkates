@@ -1,0 +1,9 @@
+@import "../assets/styles/colors.scss";
+.global {
+  min-height: 100vh;
+  background-color: $main;
+}
+main {
+  background-color: $main-500;
+  min-height: calc(100vh - 56px);
+}

@@ -1,0 +1,56 @@
+<form [formGroup]="joinForm" class="container bg-light pt-5">
+  <div class="row">
+    <div class="form-group col-6 float-label-control">
+      <label for="">Nombre</label>
+      <input formControlName="name" type="text" class="form-control" placeholder="Nombre">
+    </div>
+    <div class="form-group col-6 float-label-control">
+      <label for="">Apellidos</label>
+      <input  formControlName="surname" type="text" class="form-control" placeholder="Apellidos">
+    </div>
+    <div class="form-group col-6 float-label-control">
+      <label for="">Fecha de nacimiento</label>
+      <input formControlName="birthdate" type="date" class="form-control" placeholder="Fecha de nacimiento">
+    </div>
+    <div class="form-group col-6 float-label-control">
+      <label for="">Número de teléfono</label>
+      <input formControlName="phone" type="text" class="form-control" placeholder="Número de teléfono">
+    </div>
+    <div class="form-group col-8 float-label-control">
+      <label for="">Correo</label>
+      <input formControlName="email" type="email" class="form-control" placeholder="Correo">
+    </div>
+    <div class="form-group col-4 float-label-control">
+      <label for="">Modalidad</label>
+      <select formControlName="kind" class="form-control">
+        <option value="URBANO">URBANO</option>
+        <option value="FREESTYLE">FREESTYLE</option>
+        <option value="ARTISTICO">ARTISTICO</option>
+        <option value="ROLLEROBICS">ROLLEROBICS</option>
+      </select>
+    </div>
+    <div class="form-group col-4 float-label-control">
+      <label for="">Nivel</label>
+      <select formControlName="level" class="form-control">
+        <option value="BASICO">BASICO</option>
+        <option value="INTERMEDIO">INTERMEDIO</option>
+        <option value="AVANZADO">AVANZADO</option>
+      </select>
+    </div>
+    <div class="form-group col-4 float-label-control">
+      <label for="">Zona</label>
+      <select formControlName="location" class="form-control">
+        <option value="RETIRO">Parque del Retiro</option>
+        <option value="FREESTYLE">FREESTYLE</option>
+        <option value="ARTISTICO">ARTISTICO</option>
+        <option value="ROLLEROBICS">ROLLEROBICS</option>
+      </select>
+    </div>
+
+    <div class="form-group col-6 float-label-control">
+      <label for="">Comentarios</label>
+      <input formControlName="comments" type="text" class="form-control" placeholder="Comentarios">
+    </div>
+  </div>
+  <button (click)="sendMail()">Enviar</button>
+</form>

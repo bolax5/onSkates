@@ -1,23 +1,21 @@
-<nav class="navbar navbar-dark bg-dark mb-5">
-  <a class="navbar-brand" href="/">Angular & Bootstrap</a>
+<nav class="navbar navbar-dark bg-main">
+  <a class="navbar-brand" href="/">OnSkates</a>
   <div class="navbar-expand mr-auto">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Home</a>
-      <a class="nav-item nav-link" href="#">About</a>
-      <a class="nav-item nav-link" href="#">Contact</a>
+      <a class="nav-item nav-link" [routerLink]="['/home']" routerLinkActive="active">{{"HEADER.HOME"| translate}}</a>
+      <a class="nav-item nav-link" [routerLink]="['/about']" routerLinkActive="active">{{"HEADER.ABOUT"| translate}}</a>
+      <a class="nav-item nav-link" [routerLink]="['/contact']" routerLinkActive="active">{{"HEADER.CONTACT"| translate}}</a>
     </div>
   </div>
-  <div class="navbar-expand ml-auto navbar-nav">
+  <!-- <div class="navbar-expand ml-auto navbar-nav">
     <div class="navbar-nav">
-      <a class="nav-item nav-link" href="https://github.com/beeman" target="_blank">
-        <i class="fa fa-github"></i>
+      <a *ngIf="!isLoggedIn()" class="nav-item nav-link" href="/login">
+        {{"HEADER.LOGIN"| translate}}
       </a>
-      <a class="nav-item nav-link" href="https://twitter.com/beeman_nl" target="_blank">
-        <i class="fa fa-twitter"></i>
-      </a>
-      <a class="nav-item nav-link" href="https://medium.com/@beeman" target="_blank">
-        <i class="fa fa-medium"></i>
-      </a>
+      <div *ngIf="isLoggedIn()" (click)="logout()" class="nav-item nav-link">
+        {{"HEADER.LOGOUT"| translate}}
+      </div>
+
     </div>
-  </div>
+  </div> -->
 </nav>

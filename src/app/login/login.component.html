@@ -1,0 +1,28 @@
+<div class="container">
+    <form [formGroup]="loginForm">
+        <h2>Please Log in</h2>
+        <label class="sr-only m-3">Email address</label>
+        <input type="email" class="form-control m-3" [placeholder]="'LOGIN.USERNAME | translate'" autofocus
+          email formControlName="email">
+        <label class="sr-only m-3">Password</label>
+        <input type="password" class="form-control m-3" [placeholder]="'LOGIN.PASSWORD | translate'"
+          formControlName="password">
+        <button class="btn btn-lg btn-primary btn-block" (click)="logIn()">Sign in</button>
+      </form>
+  <hr>
+<!--
+  <form [formGroup]="signinForm">
+    <h2>Please sign in</h2>
+    <label class="sr-only m-3">Email address</label>
+    <input type="email" class="form-control m-3" [placeholder]="'LOGIN.USERNAME | translate'" autofocus
+      email formControlName="email">
+    <label class="sr-only m-3">Password</label>
+    <input type="password" class="form-control m-3" [placeholder]="'LOGIN.PASSWORD | translate'"
+      formControlName="password">
+    <label class="sr-only m-3">repeat Password</label>
+    <input type="password" class="form-control m-3" [placeholder]="'LOGIN.REPEAT_PASSWORD | translate'"
+      formControlName="repeatPassword">
+    <button class="btn btn-lg btn-primary btn-block" (click)="signIn()">Sign in</button>
+  </form> -->
+
+</div>

@@ -1,3 +1,10 @@
 {
-  "TITLE": "OnSkates!"
+  "TITLE": "Club de patinaje OnSkates!",
+  "HEADER": {
+    "LOGIN": "Acceder",
+    "LOGOUT": "Cerrar sesión",
+    "HOME": "Inicio",
+    "ABOUT": "Sobre nosotros",
+    "CONTACT": "Contacto"
+  }
 }

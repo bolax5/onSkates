@@ -8,6 +8,9 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+
 
 
 
@@ -30,6 +33,10 @@ export function throwIfAlreadyLoaded(parentModule: any, moduleName: string) {
         useFactory: (createTranslateLoader),
         deps: [HttpClient]
       }
+    }),
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory
     }),
     AngularFireModule.initializeApp(environment.firebaseConfig, 'onSkates'), // imports firebase/app needed for everything
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
