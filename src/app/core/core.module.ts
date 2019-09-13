@@ -10,6 +10,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { AgmCoreModule } from '@agm/core';
+
 
 
 
@@ -33,6 +35,9 @@ export function throwIfAlreadyLoaded(parentModule: any, moduleName: string) {
         useFactory: (createTranslateLoader),
         deps: [HttpClient]
       }
+    }),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBR4JoCokz3N63HcJcnGkd9TXY1-_oXUWc'
     }),
     CalendarModule.forRoot({
       provide: DateAdapter,

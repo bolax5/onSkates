@@ -1,0 +1,68 @@
+:host {
+    position: fixed;
+    top: 75vh;
+    right: 0;
+    .dialog {
+        position: absolute;
+        top: -75px;
+        display: none;
+        p {
+            position: absolute;
+            top: 25px;
+            left: 45px;
+        }
+    }
+    &:hover .dialog {
+        display: inline;
+    }
+    .eye, .eyelash {
+        position: absolute;
+        width: 5px;
+        top: 22px;
+        z-index: 1000;
+        border-radius: 100%;
+        left: 88px;
+        
+    }
+    .eye {
+        background-color: pink;
+        height: 5px;
+
+    }
+    .eyelash {
+        height: 0px;
+
+        background-color: black;
+        animation: blink-animation 4s reverse infinite;
+        -webkit-animation: blink-animation 4s reverse infinite;
+    }
+
+      @keyframes blink-animation {
+        0% {
+          height: 5px;
+        }
+        25% {
+          height: 0px;
+        }
+        50% {
+          height: 5px;
+        }
+        75% {
+          height: 0px;
+        }
+      }
+      @-webkit-keyframes blink-animation {
+        0%{
+            height: 5px;
+          }
+          25% {
+            height: 0px;
+          }
+          50% {
+            height: 5px;
+          }
+          75% {
+            height: 0px;
+          }
+      }
+}

@@ -1,8 +1,6 @@
 import { Injectable, Injector } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AngularFireDatabase } from '@angular/fire/database';
-import { Post } from '../domain/post';
-import { StaticInjector } from '@angular/core/src/di/injector';
 
 @Injectable({
   providedIn: 'root'

@@ -1,9 +1,56 @@
 @import "../assets/styles/colors.scss";
 .global {
   min-height: 100vh;
-  background-color: $main;
+  background-color: $color-primary-dark;
+  color: $color-primary-darker;
 }
 main {
-  background-color: $main-500;
+  background-color: $color-primary-lighter;
+  // background-image: url(../assets/img/concrete_wall.png);
   min-height: calc(100vh - 56px);
+}
+.background {
+
+position: absolute;
+  
+display: block;
+  
+top:0;
+  
+left:0;
+  
+z-index:0;
+}
+img.logo{
+  position:fixed;
+  left: 20px;
+  top:0;
+  height: 60px;
+  z-index: 1001;
+  -webkit-animation: linear;
+  -webkit-animation-name: run;
+  -webkit-animation-duration: 3s;
+}     
+.cover {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  opacity: 0;
+  -webkit-animation: linear;
+  -webkit-animation-name: hide;
+  -webkit-animation-duration: 3s;
+}
+@-webkit-keyframes run {
+  0% { left: 45%; top:50%; transform: scale(3.5);}
+  50% { left: 45%; top:50%; transform: scale(3.5);}
+  // 50% { left: 25%; top:25%; }
+  100% { left: 20px; top:0;}
+}
+@-webkit-keyframes hide {
+  0% { opacity: 1; z-index: 1000;}
+  30% { opacity: 1; z-index: 1000;}
+  // 50% { left: 25%; top:25%; }
+  80% { opacity: 0; z-index: 1000;}
+  100% { opacity: 0; z-index: 1000;}
 }

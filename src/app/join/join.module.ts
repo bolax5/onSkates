@@ -5,6 +5,7 @@ import { SharedModule } from '../shared/shared.module';
 @NgModule({
   declarations: [JoinComponent],
   exports: [JoinComponent],
+  entryComponents: [JoinComponent],
   imports: [
     SharedModule
   ]

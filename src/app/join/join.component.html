@@ -1,56 +1,66 @@
-<form [formGroup]="joinForm" class="container bg-light pt-5">
+<h1 mat-dialog-title>Inscribete!</h1>
+<form mat-dialog-content [formGroup]="joinForm" class="container-fluid pt-5">
   <div class="row">
-    <div class="form-group col-6 float-label-control">
-      <label for="">Nombre</label>
-      <input formControlName="name" type="text" class="form-control" placeholder="Nombre">
-    </div>
-    <div class="form-group col-6 float-label-control">
-      <label for="">Apellidos</label>
-      <input  formControlName="surname" type="text" class="form-control" placeholder="Apellidos">
-    </div>
-    <div class="form-group col-6 float-label-control">
-      <label for="">Fecha de nacimiento</label>
-      <input formControlName="birthdate" type="date" class="form-control" placeholder="Fecha de nacimiento">
-    </div>
-    <div class="form-group col-6 float-label-control">
-      <label for="">Número de teléfono</label>
-      <input formControlName="phone" type="text" class="form-control" placeholder="Número de teléfono">
-    </div>
-    <div class="form-group col-8 float-label-control">
-      <label for="">Correo</label>
-      <input formControlName="email" type="email" class="form-control" placeholder="Correo">
-    </div>
-    <div class="form-group col-4 float-label-control">
-      <label for="">Modalidad</label>
-      <select formControlName="kind" class="form-control">
-        <option value="URBANO">URBANO</option>
-        <option value="FREESTYLE">FREESTYLE</option>
-        <option value="ARTISTICO">ARTISTICO</option>
-        <option value="ROLLEROBICS">ROLLEROBICS</option>
-      </select>
-    </div>
-    <div class="form-group col-4 float-label-control">
-      <label for="">Nivel</label>
-      <select formControlName="level" class="form-control">
-        <option value="BASICO">BASICO</option>
-        <option value="INTERMEDIO">INTERMEDIO</option>
-        <option value="AVANZADO">AVANZADO</option>
-      </select>
-    </div>
-    <div class="form-group col-4 float-label-control">
-      <label for="">Zona</label>
-      <select formControlName="location" class="form-control">
-        <option value="RETIRO">Parque del Retiro</option>
-        <option value="FREESTYLE">FREESTYLE</option>
-        <option value="ARTISTICO">ARTISTICO</option>
-        <option value="ROLLEROBICS">ROLLEROBICS</option>
-      </select>
-    </div>
+    <mat-form-field class="col-6">
+      <input matInput formControlName="name" placeholder="Nombre">
+      <mat-error>El nombre del alumno es obligatorio</mat-error>
+    </mat-form-field>
+    <mat-form-field class="col-6">
+      <input matInput formControlName="surname" placeholder="Apellidos">
+      <mat-error>El apellido del alumno es obligatorio</mat-error>
+    </mat-form-field>
+    <mat-form-field class="col-6">
+      <input matInput formControlName="birthdate" [matDatepicker]="date" placeholder="Fecha de nacimiento">
+      <mat-datepicker-toggle matSuffix [for]="date"></mat-datepicker-toggle>
+      <mat-datepicker #date disabled="false"></mat-datepicker>
+      <mat-error>Necesitamos saber la edad del alumno</mat-error>
+    </mat-form-field>
+    <mat-form-field class="col-4">
+      <input matInput formControlName="phone" placeholder="Número de teléfono">
+      <mat-error>Necesitamos un teléfono de contacto válido</mat-error>
+    </mat-form-field>
+    <mat-form-field class="col-8">
+      <input matInput formControlName="email" placeholder="Correo">
+      <mat-error>Introduce un email válido</mat-error>
+    </mat-form-field>
 
-    <div class="form-group col-6 float-label-control">
-      <label for="">Comentarios</label>
-      <input formControlName="comments" type="text" class="form-control" placeholder="Comentarios">
-    </div>
+    <mat-form-field class="col-4">
+      <mat-label>Modalidad</mat-label>
+      <mat-select formControlName="kind">
+        <mat-option value="ESCUELA">Escuela</mat-option>
+        <mat-option value="URBANO">Urbano</mat-option>
+        <mat-option value="FREESTYLE">Freestyle</mat-option>
+        <mat-option value="ARTISTICO">Artístico</mat-option>
+        <mat-option value="ROLLEROBICS">Rollerobics</mat-option>
+        <mat-option (click)="goToCategories()" value="DUDA">No se a cual apuntarme!</mat-option>
+      </mat-select>
+      <mat-error>¿Que modalidad te interesa?</mat-error>
+    </mat-form-field>
+    <mat-form-field class="col-4">
+      <mat-label>Nivel</mat-label>
+      <mat-select formControlName="level">
+        <mat-option value="BASICO">Básico</mat-option>
+        <mat-option value="INTERMEDIO">Intermedio</mat-option>
+        <mat-option value="AVANZADO">Avanzado</mat-option>
+      </mat-select>
+      <mat-error>¿Que nivel?</mat-error>
+    </mat-form-field>
+    <mat-form-field class="col-8">
+      <mat-label for="">Zona</mat-label>
+      <mat-select formControlName="location">
+        <mat-option value="RETIRO">Parque del Retiro</mat-option>
+        <mat-option value="RIO">Madrid Río</mat-option>
+        <mat-option value="PACIFICO">Puente de Pacífico</mat-option>
+        <mat-option value="MINGO">Explanada de casa Mingo</mat-option>
+        <mat-option value="FUENLABRADA">Fuenlabrada</mat-option>
+      </mat-select>
+      <mat-error>Elige una ubicación</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="col-6">
+      <textarea matInput formControlName="comments" placeholder="Comentarios"></textarea>
+    </mat-form-field>
+
   </div>
-  <button (click)="sendMail()">Enviar</button>
+  <button mat-raised-button color="primary" (click)="sendMail()">Enviar</button>
 </form>

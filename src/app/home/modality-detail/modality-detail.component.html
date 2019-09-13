@@ -1,0 +1,136 @@
+<h1 mat-dialog-title>{{data.title}}</h1>
+<div mat-dialog-content class="container-fluid pt-1">
+  <div class="row">
+
+    <div class="col-sm-12 col-md-12">
+      <div>
+        <h3>Horarios</h3>
+        <ul>
+          <li *ngIf="data.kind === 0">
+            Iniciación Niños: en Pacifico “Calle del Dr. Esquerdo, 28007 Madrid”
+            <ul>
+              <li>Lunes y Miércoles de 17:30 a 18:30 en Pacífico.</li>
+            </ul>
+          </li>
+          <li *ngIf="data.kind === 0">
+            Iniciación en familia: en el parque del Retiro “Ángel Caído”.
+            <ul>
+              <li>Domingo de 19:30 - 20:30</li>
+            </ul>
+          </li>
+          <li *ngIf="data.kind === 2">
+            Slalom Niños : en Pacifico “Calle del Dr. Esquerdo, 28007 Madrid”
+            <ul>
+              <li>Lunes y Martes de 18:30 a 19:30</li>
+            </ul>
+          </li>
+          <li *ngIf="data.kind === 2">
+            Slalom adulto: en Pacifico “Calle del Dr. Esquerdo, 28007 Madrid”
+            <ul>
+              <li>Lunes de 19:30- 20:30 o 20:30 a 21:30</li>
+              <li>Miercoles de 20:30 a 21:30</li>
+              <li>Domingos de 19:30 a 20:30 en el parque del Retiro “Ángel Caído”.</li>
+            </ul>
+          </li>
+          <li *ngIf="data.kind === 2">
+            Slalom Avanzado (nivel de competición): en Pacifico “Calle del Dr. Esquerdo, 28007 Madrid”
+            <ul>
+              <li>Martes de 19:30 a 20:30</li>
+              <li>Miércoles de 18:30 a 20:30</li>
+              <li>Domingo de 11:00 a 12:00</li>
+            </ul>
+          </li>
+          <li *ngIf="data.kind === 1">
+            Urbano: en el parque del Retiro “Ángel Caído”.
+            <ul>
+              <li>Miércoles de 19:00-20:00</li>
+            </ul>
+          </li>
+          <li *ngIf="data.kind === 4">
+            Rollerbics: en el parque del Retiro “Ángel Caído”.
+            <ul>
+              <li>Jueves de 19:00-20:00</li>
+            </ul>
+          </li>
+          <li *ngIf="data.kind === 5">
+            Skate: legazpi Paseo de la Chopera, s/n, 28045 Madrid
+            <ul>
+              <li>Domingos de 11:00-12:00</li>
+            </ul>
+          </li>
+          <li *ngIf="data.kind === 3">
+            Artístico:
+            <ul>
+              <li>Aún no hemos abierto grupo, Contacta con nosotros!</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3>Tarifas</h3>
+        <div class="row">
+          <div class="col border rounded p-3 text-center">
+            <h5>Mensual</h5>
+            <p>4 horas</p>
+            <hr>
+            <span>35 €</span>
+          </div>
+          <div class="col border rounded p-3 text-center">
+            <div class="best-offer"></div>
+            <h5>Mensual</h5>
+            <p>8 horas</p>
+            <hr>
+            <span>55 €</span>
+          </div>
+          <div class="col border rounded p-3 text-center">
+            <h5>Trimestral</h5>
+            <p>4 horas</p>
+            <hr>
+            <span>100 €</span>
+          </div>
+          <div class="col border rounded p-3 text-center">
+            <div class="best-offer"></div>
+            <h5>Trimestral</h5>
+            <p>8 horas</p>
+            <hr>
+            <span>145 €</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-3">
+      <h3>Ubicaciones</h3>
+      <mat-form-field>
+        <mat-label for="">Zona</mat-label>
+        <mat-select [(ngModel)]="location">
+          <mat-option value="RETIRO">Parque del Retiro</mat-option>
+          <mat-option value="RIO">Madrid Río</mat-option>
+          <mat-option value="PACIFICO">Puente de Pacífico</mat-option>
+          <mat-option value="MINGO">Explanada de casa Mingo</mat-option>
+          <mat-option value="FUENLABRADA">Fuenlabrada</mat-option>
+        </mat-select>
+        <mat-error>Elige una ubicación</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-sm-12 col-md-9" [ngSwitch]="location">
+      <div *ngSwitchCase="'RETIRO'">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3049.767078233097!2d-3.684725484728677!3d40.41105786390858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42261f8069fef9%3A0x4914e59cf8d79c20!2sFuente%20del%20%C3%81ngel%20Ca%C3%ADdo!5e1!3m2!1ses!2ses!4v1568408216390!5m2!1ses!2ses"
+          width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      </div>
+      <div *ngSwitchCase="'RIO'">
+        <iframe class="mx-auto"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.9972743401804!2d-3.725554884467678!3d40.41167647936571!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42274d0f3ae8db%3A0xb0d64bb28285be17!2sParque%20Madrid%20R%C3%ADo!5e1!3m2!1ses!2ses!4v1568050604026!5m2!1ses!2ses"
+          width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      </div>
+      <div *ngSwitchCase="'PACIFICO'">
+        <iframe class="mx-auto"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.83966303723!2d-3.6866881846041086!3d40.415260579365324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42289ff511827b%3A0x9e6c2716b524a3ae!2sParque%20de%20El%20Retiro!5e1!3m2!1ses!2ses!4v1568046409360!5m2!1ses!2ses"
+          width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      </div>
+      <div *ngSwitchCase="'MINGO'"><iframe class="mx-auto"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d336.8564369158411!2d-3.7252314134288733!3d40.42502722319298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228130271d083%3A0x66a01371d1e0c2b9!2sCasa%20Mingo!5e1!3m2!1ses!2ses!4v1568050663915!5m2!1ses!2ses"
+          width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe> </div>
+    </div>
+  </div>
+</div>

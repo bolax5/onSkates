@@ -8,6 +8,7 @@ import { SharedModule } from './shared/shared.module';
 import { CalendarModule } from './calendar/calendar.module';
 import { HomeModule } from './home/home.module';
 import { JoinModule } from './join/join.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { JoinModule } from './join/join.module';
     SharedModule,
     // CalendarModule,
     HomeModule,
-    JoinModule
+    JoinModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

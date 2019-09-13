@@ -11,6 +11,7 @@ import { MireiaComponent } from './team/mireia/mireia.component';
 import { MiriamComponent } from './team/miriam/miriam.component';
 import { CristianComponent } from './team/cristian/cristian.component';
 import { SaraComponent } from './team/sara/sara.component';
+import { ModalityDetailComponent } from './modality-detail/modality-detail.component';
 const COMPONENTS = [
   HomeComponent,
   AboutComponent,
@@ -24,13 +25,17 @@ const COMPONENTS = [
 
 @NgModule({
   declarations: [
-    ...COMPONENTS
+    ...COMPONENTS,
+    ModalityDetailComponent
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
     SharedModule
   ],
-  exports: [...COMPONENTS]
+  exports: [...COMPONENTS],
+  entryComponents: [
+    ModalityDetailComponent
+  ]
 })
 export class HomeModule { }

@@ -1,0 +1,13 @@
+<nav id="footer" class="navbar navbar-dark bg-main">
+    <a class="navbar-brand" href="/">
+      <img class="d-inline-block align-top" height="40" src="../assets/img/LOGOOFICIALOFICIAL.png">
+    </a>
+    <div class="navbar-expand mr-auto">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" [routerLink]="['/home']" routerLinkActive="active">{{"HEADER.HOME"| translate}}</a>
+        <a class="nav-item nav-link" [routerLink]="['/about']" routerLinkActive="active">{{"HEADER.ABOUT"| translate}}</a>
+        <a class="nav-item nav-link" [routerLink]="['/contact']" routerLinkActive="active">{{"HEADER.CONTACT"| translate}}</a>
+        <a class="nav-item nav-link" (click)="openModal()">Inscribete</a>
+      </div>
+    </div>
+  </nav>

@@ -1,10 +1,13 @@
 <nav class="navbar navbar-dark bg-main">
-  <a class="navbar-brand" href="/">OnSkates</a>
-  <div class="navbar-expand mr-auto">
+  <!-- <a class="navbar-brand" href="/">
+    <img class="d-inline-block align-top logo test" height="150" src="../assets/img/LOGOOFICIALOFICIAL.png">
+  </a> -->
+  <div class="navbar-expand items mr-auto">
     <div class="navbar-nav">
-      <a class="nav-item nav-link" [routerLink]="['/home']" routerLinkActive="active">{{"HEADER.HOME"| translate}}</a>
-      <a class="nav-item nav-link" [routerLink]="['/about']" routerLinkActive="active">{{"HEADER.ABOUT"| translate}}</a>
-      <a class="nav-item nav-link" [routerLink]="['/contact']" routerLinkActive="active">{{"HEADER.CONTACT"| translate}}</a>
+      <a class="nav-item nav-link" [routerLink]="['/home']">{{"HEADER.HOME"| translate}}</a>
+      <a class="nav-item nav-link" (click)="goTo('about-us')">{{"HEADER.ABOUT"| translate}}</a>
+      <a class="nav-item nav-link" (click)="goTo('footer')">{{"HEADER.CONTACT"| translate}}</a>
+      <a class="nav-item nav-link" (click)="openModal()">Inscribete</a>
     </div>
   </div>
   <!-- <div class="navbar-expand ml-auto navbar-nav">
@@ -19,3 +22,4 @@
     </div>
   </div> -->
 </nav>
+
