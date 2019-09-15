@@ -34,44 +34,36 @@
       <h2 class="control-element mb-0 p-3" (click)="select('slide2')" [ngClass]="{'active': currentSlide=== 'slide2'}">
         Valores</h2>
     </div>
-    <ngb-carousel [interval]=0 class="p-3" (slide)="onSlide($event)" #carousel>
+    <ngb-carousel [interval]=10000 class="p-3" (slide)="onSlide($event)" #carousel>
 
       <ng-template id="slide0" ngbSlide>
-        <div class="carrousel-card p-4 second fade-in">
+        <div class="carrousel-card text-shadow background-1 p-4">
           <p class="">
             Nuestra misión como escuela es potenciar el patinaje en Madrid a partir de metodologías excepcionales
-            atendiendo
-            a todos los niveles y a un gran abanico de disciplinas. Buscamos ser la escuela elegida por todo aquel que
-            quiera
-            aprender a patinar o mejorar sus habilidades sobre ruedas. Lo que más nos interesa es que nuestro alumnado
-            se
-            divierta aprendiendo de un modo seguro.
+            atendiendo a todos los niveles y a un gran abanico de disciplinas. Buscamos ser la escuela elegida por todo
+            aquel que quiera aprender a patinar o mejorar sus habilidades sobre ruedas. Lo que más nos interesa es que
+            nuestro alumnado se divierta aprendiendo de un modo seguro.
           </p>
         </div>
 
       </ng-template>
       <ng-template id="slide1" ngbSlide>
-        <div class="carrousel-card p-4 second fade-in">
+        <div class="carrousel-card text-shadow background-2 p-4">
           <p class="">
-            En ONSKATES tenemos una amplia visión de futuro de cara a llevar a cabo nuevos y grandes proyectos.
-            Queremos que esto sea muy grande, tanto a nivel autonómico como a nivel nacional y para ello contamos con
-            los
-            mejores
+            En ONSKATES tenemos una amplia visión de futuro de cara a llevar a cabo nuevos y grandes proyectos. Queremos
+            que esto sea muy grande, tanto a nivel autonómico como a nivel nacional y para ello contamos con los mejores
             profesionales, los cuales se están formando permanentemente para conseguirlo.</p>
         </div>
 
       </ng-template>
       <ng-template id="slide2" ngbSlide>
-        <div class="carrousel-card p-4 second fade-in">
+        <div class="carrousel-card text-shadow background-3 p-4">
           <p class="">
             En nuestra escuela prevalecen el compromiso y la pasión por nuestro trabajo. Consideramos que estos valores
-            son
-            primordiales para la comodidad absoluta de nuestro alumnado y para el crecimiento de ON SKATES. Además, la
-            calidad
-            de nuestras clases, la igualdad entre el alumnado y cercanía de nuestro equipo son los pilares de la
-            escuela.
-            Finalmente, y no por tanto menos importante, La constancia y la perseverancia van siempre de la mano,
-            recuerda que con ellas conseguirás siempre todo lo que te propongas.
+            son primordiales para la comodidad absoluta de nuestro alumnado y para el crecimiento de ON SKATES. Además,
+            la calidad de nuestras clases, la igualdad entre el alumnado y cercanía de nuestro equipo son los pilares de
+            la escuela. Finalmente, y no por tanto menos importante, La constancia y la perseverancia van siempre de la
+            mano, recuerda que con ellas conseguirás siempre todo lo que te propongas.
           </p>
         </div>
 
@@ -79,57 +71,20 @@
     </ngb-carousel>
   </section>
 </article>
-<!-- <article class="container mt-4 bg-light">
-  <h2>Quiénes somos:</h2>
-  <div>
-    <p>
-      ¡Hola! Si estás leyendo esto es porque quieres saber un poquito más sobre nosotros… ¡Vamos a ello!
-    </p>
-    <p>Somos Miriam, Mireia, Cristian y Sara, el equipo directivo de ONSKATES. Desde hace muchos años, Mire y Miri
-      tenían un sueño por cumplir; crear una escuela de patinaje. Lo que no sabían es en qué momento se pondría todo en
-      marcha.
-    </p>
-    <p>Justo en Octubre del 2018 empezó nuestro proyecto, nuestro pequeño y a la vez gran proyecto. Al principio
-      cambiamos mil veces de nombre y teníamos tantos logos que nos salían casi por las orejas. Eso sí, tenemos que
-      decir que el flamenco siempre estuvo ahí. No sabíamos muy bien por donde empezar, pero teníamos tantas ganas que
-      movimos tierra y aire para hacerlo todo bien desde el principio. Gracias al apoyo incondicional recibido por parte
-      de Cristian y Sara el sueño de estas dos patinadoras se empezó a cumplir.
-    </p>
-    <p>Después de mucho papeleo, muchas llamadas, reuniones… esto ha arrancado. Nosotros seguimos trabajando y
-      dejándonos la piel para que nuestra escuela crezca. Queremos darles a nuestros alumnos y alumnas y deportistas de
-      competición lo que se merecen y trabajaremos día a día para conseguirlo.
-    </p>
-    <p>
-      Seguramente os preguntaréis por qué un flamenco. A Miri y a Mire les gustan mucho estos animalillos, y a Sari y a
-      Cris les pareció buena idea. No obstante, tenemos que decir que estos animales son super sociales y llegan a
-      formar
-      colonias de miles de individuos. Además de esto, pensamos que el hecho de tener una mascota es divertido y, a su
-      vez, hace
-      que
-      aflore un bonito sentimiento de pertenencia al club. Por tanto… debido a lo que representan en cuanto a valores,
-      lo
-      bonitos que son y lo divertido que es tener una mascota en la escuela, el flamenco fue el elegido.
-    </p>
-  </div>
-</article> -->
 <article class="parallax third mt-4">
   <div class="container">
     <h2 id="categories" class="text-shadow pt-3">Modalidades:</h2>
     <p class="text-shadow">
       Dentro de nuestra escuela vas a poder disfrutar de una gran variedad de modalidades. A continuación te contamos en
-      qué
-      consiste cada una de ellas para facilitar tu elección.
+      qué consiste cada una de ellas para facilitar tu elección.
     </p>
     <div class="row no-gutters text-justify">
       <div class="col-sm-12 col-md-6 p-3">
         <div class="container-fluid h-100 card p-3">
           <h4 class="card-title">Patinaje de iniciación:</h4>
           <p class="card-body">En estas sesiones aprenderás las técnicas básicas del patinaje. Si quieres empezar a
-            patinar, esta es la
-            mejor
-            opción
-            para tí. Adquirirás todas las habilidades necesarias para desplazarte con tus patines de una forma segura y
-            efectiva.</p>
+            patinar, esta es la mejor opción para tí. Adquirirás todas las habilidades necesarias para desplazarte con
+            tus patines de una forma segura y efectiva.</p>
           <mat-card-actions class="d-flex justify-content-around">
             <button mat-raised-button class="modality-button"
               (click)="openModalityDetail(0, 'Escuela')">Tarifas/Horarios</button>
@@ -155,20 +110,10 @@
       <div class="col-sm-12 col-md-6 p-3">
         <div class="container-fluid h-100 card p-3">
           <h4 class="card-title">Inline freestyle:</h4>
-          <p class="card-body">Esta es una de nuestras especialidades estrella. El inline freestyle consiste en la
-            realización de
-            diferentes
-            figuras en
-            pequeños conos. Es una modalidad muy técnica y perfecta si lo que quieres es pasar un buen rato y
-            superarte
-            a
-            ti
-            mismo.
-            Es importante que sepas que entre los beneficios del slalom encontramos la mejora de tus habilidades
-            generales
-            en
-            el
-            patinaje.</p>
+          <p class="card-body">Esta es una de nuestras especialidades estrella. El inline freestyle consiste en
+            la realización de diferentes figuras en pequeños conos. Es una modalidad muy técnica y perfecta si lo que
+            quieres es pasar un buen rato y superarte a ti mismo. Es importante que sepas que entre los beneficios del slalom
+            encontramos la mejora de tus habilidades generales en el patinaje.</p>
           <mat-card-actions class="d-flex justify-content-around">
             <button mat-raised-button class="modality-button"
               (click)="openModalityDetail(2, 'Slalom')">Tarifas/Horarios</button>
@@ -179,14 +124,9 @@
         <div class="container-fluid h-100 card p-3">
           <h4 class="card-title">Patinaje Artístico:</h4>
           <p class="card-body">Elegancia, finura, piruetas… Todos estos aspectos se trabajan con el patinaje artístico.
-            Esta modalidad
-            se
-            suele
-            realizar con ruedas quads (2 ruedas en paralelo), pero también hay patines de artístico en línea, así que…
-            ¡no
-            hay
-            excusa! Impartimos sesiones de nivel básico en las cuales aprenderás las principales técnicas de esta
-            disciplina.
+            Esta modalidad se suele realizar con ruedas quads (2 ruedas en paralelo), pero también hay patines de
+            artístico en línea, así que… ¡no hay excusa! Impartimos sesiones de nivel básico en las cuales aprenderás
+            las principales técnicas de esta disciplina.
           </p>
           <mat-card-actions class="d-flex justify-content-around">
             <button mat-raised-button class="modality-button"
@@ -215,14 +155,10 @@
       <div class="col-sm-12 col-md-6 p-3">
         <div class="container-fluid h-100 card p-3">
           <h4 class="card-title">Patinaje urbano:</h4>
-          <p class="card-body">Si lo tuyo es ir de ruta, las sesiones de patinaje urbano te van a encantar. Contamos con
-            diferentes
-            niveles
-            dentro de
-            esta modalidad y gracias a nuestras metodologías excepcionales adquirirás todo lo necesario para darle vida
-            a
-            tu
-            patinaje callejero. En estas clases destacan las rutas y los obstáculos.</p>
+          <p class="card-body">
+            Si lo tuyo es ir de ruta, las sesiones de patinaje urbano te van a encantar. Contamos con diferentes niveles
+            dentro de esta modalidad y gracias a nuestras metodologías excepcionales adquirirás todo lo necesario para
+            darle vida a tu patinaje callejero. En estas clases destacan las rutas y los obstáculos.</p>
           <mat-card-actions class="d-flex justify-content-around">
             <button mat-raised-button class="modality-button"
               (click)="openModalityDetail(1, 'Urbano')">Tarifas/Horarios</button>
@@ -232,8 +168,7 @@
       </div>
       <h4 class="text-shadow">
         Además, si lo que te interesan son las clases particulares, solo tienes que contactar con nosotros vía whatsapp
-        o
-        vía mail.
+        o vía mail.
       </h4>
     </div>
   </div>

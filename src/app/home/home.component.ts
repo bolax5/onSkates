@@ -22,7 +22,6 @@ export class HomeComponent implements OnInit {
     this.items = this.postService.getAll();
   }
   ngOnInit(): void {
-    this.carrousel.pause();
     Particles.init({
       selector: '.background-elegant',
       connectParticles: true,
@@ -32,7 +31,6 @@ export class HomeComponent implements OnInit {
   select(slide: any): void {
     console.log(this.carrousel);
     this.carrousel.select(slide);
-    this.carrousel.pause();
   }
   onSlide(slideAction) {
     this.currentSlide = slideAction.current;
