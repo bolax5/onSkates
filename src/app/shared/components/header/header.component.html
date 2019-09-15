@@ -1,8 +1,5 @@
 <nav class="navbar navbar-dark bg-main">
-  <!-- <a class="navbar-brand" href="/">
-    <img class="d-inline-block align-top logo test" height="150" src="../assets/img/LOGOOFICIALOFICIAL.png">
-  </a> -->
-  <div class="navbar-expand items mr-auto">
+  <div class="d-none d-sm-block navbar-expand items mr-auto">
     <div class="navbar-nav">
       <a class="nav-item nav-link" [routerLink]="['/home']">{{"HEADER.HOME"| translate}}</a>
       <a class="nav-item nav-link" (click)="goTo('about-us')">{{"HEADER.ABOUT"| translate}}</a>
@@ -10,16 +7,25 @@
       <a class="nav-item nav-link" (click)="openModal()">Inscribete</a>
     </div>
   </div>
-  <!-- <div class="navbar-expand ml-auto navbar-nav">
+  <div class="d-block d-sm-none navbar-expand items mr-auto">
     <div class="navbar-nav">
-      <a *ngIf="!isLoggedIn()" class="nav-item nav-link" href="/login">
-        {{"HEADER.LOGIN"| translate}}
-      </a>
-      <div *ngIf="isLoggedIn()" (click)="logout()" class="nav-item nav-link">
-        {{"HEADER.LOGOUT"| translate}}
-      </div>
-
+        <a class="nav-item nav-link" (click)="openModal()">Inscribete</a>
     </div>
-  </div> -->
+  </div>
+  <div class="d-block d-sm-none navbar-expand items ml-auto">
+    <div class="navbar-nav">
+        <button clas="menu-icon" mat-icon-button [matMenuTriggerFor]="appMenu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+    </div>
+  </div>
+  <mat-menu #appMenu="matMenu">
+      <button [routerLink]="['/home']" mat-menu-item>{{"HEADER.HOME"| translate}}</button>
+      <button (click)="goTo('about-us')" mat-menu-item>{{"HEADER.ABOUT"| translate}}</button>
+      <button (click)="goTo('footer')" mat-menu-item>{{"HEADER.CONTACT"| translate}}</button>
+      <button (click)="openModal()" mat-menu-item>Inscribete</button>
+    </mat-menu>
+    
+    
 </nav>
 

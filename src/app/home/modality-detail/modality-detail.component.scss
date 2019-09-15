@@ -1,6 +1,8 @@
 :host{
     h1{
-        width: 80vw;
+        // width: 80vw;
+        border-bottom: 2px solid;
+
     }
     .best-offer {
         background-image: url('../../../assets/img/best_offer.png');
@@ -26,5 +28,8 @@
         0%{-webkit-transform: rotate(10deg);}
         50%{-webkit-transform: rotate(-5deg)}
         100%{-webkit-transform: rotate(10deg);}
-    };    
+    };  
+    .caption {
+        border: 5px solid #0599b1 !important;
+    }  
 }

@@ -1,30 +1,30 @@
 <h1 mat-dialog-title>Inscribete!</h1>
 <form mat-dialog-content [formGroup]="joinForm" class="container-fluid pt-5">
   <div class="row">
-    <mat-form-field class="col-6">
+    <mat-form-field class="col-sm-12 col-md-6">
       <input matInput formControlName="name" placeholder="Nombre">
       <mat-error>El nombre del alumno es obligatorio</mat-error>
     </mat-form-field>
-    <mat-form-field class="col-6">
+    <mat-form-field class="col-sm-12 col-md-6">
       <input matInput formControlName="surname" placeholder="Apellidos">
       <mat-error>El apellido del alumno es obligatorio</mat-error>
     </mat-form-field>
-    <mat-form-field class="col-6">
+    <mat-form-field class="col-sm-12 col-md-6">
       <input matInput formControlName="birthdate" [matDatepicker]="date" placeholder="Fecha de nacimiento">
       <mat-datepicker-toggle matSuffix [for]="date"></mat-datepicker-toggle>
       <mat-datepicker #date disabled="false"></mat-datepicker>
       <mat-error>Necesitamos saber la edad del alumno</mat-error>
     </mat-form-field>
-    <mat-form-field class="col-4">
+    <mat-form-field class="col-sm-12 col-md-4">
       <input matInput formControlName="phone" placeholder="Número de teléfono">
       <mat-error>Necesitamos un teléfono de contacto válido</mat-error>
     </mat-form-field>
-    <mat-form-field class="col-8">
+    <mat-form-field class="col-sm-12 col-md-8">
       <input matInput formControlName="email" placeholder="Correo">
       <mat-error>Introduce un email válido</mat-error>
     </mat-form-field>
 
-    <mat-form-field class="col-4">
+    <mat-form-field class="col-sm-12 col-md-4">
       <mat-label>Modalidad</mat-label>
       <mat-select formControlName="kind">
         <mat-option value="ESCUELA">Escuela</mat-option>
@@ -36,7 +36,7 @@
       </mat-select>
       <mat-error>¿Que modalidad te interesa?</mat-error>
     </mat-form-field>
-    <mat-form-field class="col-4">
+    <mat-form-field class="col-sm-12 col-md-4">
       <mat-label>Nivel</mat-label>
       <mat-select formControlName="level">
         <mat-option value="BASICO">Básico</mat-option>
@@ -45,7 +45,7 @@
       </mat-select>
       <mat-error>¿Que nivel?</mat-error>
     </mat-form-field>
-    <mat-form-field class="col-8">
+    <mat-form-field class="col-sm-12 col-md-8">
       <mat-label for="">Zona</mat-label>
       <mat-select formControlName="location">
         <mat-option value="RETIRO">Parque del Retiro</mat-option>
@@ -57,7 +57,7 @@
       <mat-error>Elige una ubicación</mat-error>
     </mat-form-field>
 
-    <mat-form-field class="col-6">
+    <mat-form-field class="col-sm-12 col-md-6">
       <textarea matInput formControlName="comments" placeholder="Comentarios"></textarea>
     </mat-form-field>
 

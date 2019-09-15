@@ -25,7 +25,27 @@ export class HomeComponent implements OnInit {
     Particles.init({
       selector: '.background-elegant',
       connectParticles: true,
-      color: ['#6dc9d5']
+      color: ['#6dc9d5'],
+      responsive: [
+        {
+          breakpoint: 768,
+          options: {
+            maxParticles: 200
+          }
+        }, {
+          breakpoint:
+            425
+          ,
+          options: {
+            maxParticles: 0,
+          }
+        }, {
+          breakpoint: 320,
+          options: {
+            maxParticles: 0
+          }
+        }
+      ]
     });
   }
   select(slide: any): void {

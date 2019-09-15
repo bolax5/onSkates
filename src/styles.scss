@@ -31,10 +31,10 @@ $onSkates-theme: mat-light-theme($onSkates-primary, $onSkates-accent, $onSkates-
 @import "../node_modules/angular-calendar/css/angular-calendar.css";
 @import "./assets/styles/colors.scss";
 .carousel-control-next{
-    right: -100px !important;
+    // right: -100px !important;
   }
   .carousel-control-prev{
-    left: -100px !important;
+    // left: -100px !important;
   }
   .carousel-inner{
       height: 100%;

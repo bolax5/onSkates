@@ -34,10 +34,10 @@
       <h2 class="control-element mb-0 p-3" (click)="select('slide2')" [ngClass]="{'active': currentSlide=== 'slide2'}">
         Valores</h2>
     </div>
-    <ngb-carousel [interval]=10000 class="p-3" (slide)="onSlide($event)" #carousel>
+    <ngb-carousel [showNavigationIndicators]="false" [interval]=10000 class="p-3" (slide)="onSlide($event)" #carousel>
 
       <ng-template id="slide0" ngbSlide>
-        <div class="carrousel-card text-shadow background-1 p-4">
+        <div class="carrousel-card text-justify text-shadow background-1 p-4">
           <p class="">
             Nuestra misión como escuela es potenciar el patinaje en Madrid a partir de metodologías excepcionales
             atendiendo a todos los niveles y a un gran abanico de disciplinas. Buscamos ser la escuela elegida por todo
@@ -48,7 +48,7 @@
 
       </ng-template>
       <ng-template id="slide1" ngbSlide>
-        <div class="carrousel-card text-shadow background-2 p-4">
+        <div class="carrousel-card text-justify text-shadow background-2 p-4">
           <p class="">
             En ONSKATES tenemos una amplia visión de futuro de cara a llevar a cabo nuevos y grandes proyectos. Queremos
             que esto sea muy grande, tanto a nivel autonómico como a nivel nacional y para ello contamos con los mejores
@@ -57,7 +57,7 @@
 
       </ng-template>
       <ng-template id="slide2" ngbSlide>
-        <div class="carrousel-card text-shadow background-3 p-4">
+        <div class="carrousel-card text-justify text-shadow background-3 p-4">
           <p class="">
             En nuestra escuela prevalecen el compromiso y la pasión por nuestro trabajo. Consideramos que estos valores
             son primordiales para la comodidad absoluta de nuestro alumnado y para el crecimiento de ON SKATES. Además,
