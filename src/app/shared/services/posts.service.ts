@@ -5,13 +5,13 @@ import { Post } from 'src/app/core/domain/post';
 @Injectable({
   providedIn: 'root'
 })
-export class PostsService extends HttpDataService<Post> {
+export class PostsService {
 
   constructor(injector: Injector) {
-    super(injector, 'posts');
+    // super(injector, 'posts');
    }
 
   getAll() {
-    return this.get();
+    // return this.get();
   }
 }

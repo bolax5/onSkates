@@ -7,7 +7,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
   styleUrls: ['./modality-detail.component.scss']
 })
 export class ModalityDetailComponent implements OnInit {
-
+  location;
   constructor(
     public dialogRef: MatDialogRef<ModalityDetailComponent>,
     @Inject(MAT_DIALOG_DATA) public data) { }

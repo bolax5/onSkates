@@ -1,8 +1,6 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { AngularFireDatabase } from '@angular/fire/database';
 import { Post } from '../core/domain/post';
-import { PostsService } from '../shared/services/posts.service';
 import { MatDialog } from '@angular/material';
 import { ModalityDetailComponent } from './modality-detail/modality-detail.component';
 declare const Particles;
@@ -18,8 +16,8 @@ export class HomeComponent implements OnInit {
   items: Observable<Post[]>;
   currentSlide = 'slide0';
 
-  constructor(private postService: PostsService, public dialog: MatDialog) {
-    this.items = this.postService.getAll();
+  constructor(public dialog: MatDialog) {
+    // this.items = this.postService.getAll();
   }
   ngOnInit(): void {
     Particles.init({
@@ -49,7 +47,6 @@ export class HomeComponent implements OnInit {
     });
   }
   select(slide: any): void {
-    console.log(this.carrousel);
     this.carrousel.select(slide);
   }
   onSlide(slideAction) {

@@ -1,7 +1,8 @@
 <nav class="navbar navbar-dark bg-main">
   <div class="d-none d-sm-block navbar-expand items mr-auto">
     <div class="navbar-nav">
-      <a class="nav-item nav-link" [routerLink]="['/home']">{{"HEADER.HOME"| translate}}</a>
+      <a class="nav-item nav-link" (click)="goTo('home')">{{"HEADER.HOME"| translate}}</a>
+      <a class="nav-item nav-link" (click)="goTo('categories')">Modalidades</a>
       <a class="nav-item nav-link" (click)="goTo('about-us')">{{"HEADER.ABOUT"| translate}}</a>
       <a class="nav-item nav-link" (click)="goTo('footer')">{{"HEADER.CONTACT"| translate}}</a>
       <a class="nav-item nav-link" (click)="openModal()">Inscribete</a>
@@ -20,7 +21,8 @@
     </div>
   </div>
   <mat-menu #appMenu="matMenu">
-      <button [routerLink]="['/home']" mat-menu-item>{{"HEADER.HOME"| translate}}</button>
+      <button (click)="goTo('home')" mat-menu-item>{{"HEADER.HOME"| translate}}</button>
+      <button (click)="goTo('categories')" mat-menu-item>Modalidades</button>
       <button (click)="goTo('about-us')" mat-menu-item>{{"HEADER.ABOUT"| translate}}</button>
       <button (click)="goTo('footer')" mat-menu-item>{{"HEADER.CONTACT"| translate}}</button>
       <button (click)="openModal()" mat-menu-item>Inscribete</button>

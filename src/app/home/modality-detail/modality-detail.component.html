@@ -19,13 +19,13 @@
             </ul>
           </li>
           <li *ngIf="data.kind === 2">
-            Slalom Niños: en Pacifico “Calle del Dr. Esquerdo, 28007 Madrid”
+            <b>Slalom Niños: en Pacifico “Calle del Dr. Esquerdo, 28007 Madrid”</b>
             <ul>
               <li>Lunes y Martes de 18:30 a 19:30</li>
             </ul>
           </li>
           <li *ngIf="data.kind === 2">
-            Slalom adulto: en Pacifico “Calle del Dr. Esquerdo, 28007 Madrid”
+            <b>Slalom adulto: en Pacifico “Calle del Dr. Esquerdo, 28007 Madrid”</b>
             <ul>
               <li>Lunes de 19:30- 20:30 o 20:30 a 21:30</li>
               <li>Miercoles de 20:30 a 21:30</li>
@@ -33,7 +33,7 @@
             </ul>
           </li>
           <li *ngIf="data.kind === 2">
-            Slalom Avanzado (nivel de competición): en Pacifico “Calle del Dr. Esquerdo, 28007 Madrid”
+            <b>Slalom Avanzado (nivel de competición): en Pacifico “Calle del Dr. Esquerdo, 28007 Madrid”</b>
             <ul>
               <li>Martes de 19:30 a 20:30</li>
               <li>Miércoles de 18:30 a 20:30</li>
@@ -41,25 +41,25 @@
             </ul>
           </li>
           <li *ngIf="data.kind === 1">
-            Urbano: en el parque del Retiro “Ángel Caído”.
+            <b>Urbano: en el parque del Retiro “Ángel Caído”.</b>
             <ul>
               <li>Miércoles de 19:00-20:00</li>
             </ul>
           </li>
           <li *ngIf="data.kind === 4">
-            Rollerbics: en el parque del Retiro “Ángel Caído”.
+            <b>Rollerbics: en el parque del Retiro “Ángel Caído”.</b>
             <ul>
               <li>Jueves de 19:00-20:00</li>
             </ul>
           </li>
           <li *ngIf="data.kind === 5">
-            Skate: legazpi Paseo de la Chopera, s/n, 28045 Madrid
+            <b>Skate: legazpi Paseo de la Chopera, s/n, 28045 Madrid</b>
             <ul>
               <li>Domingos de 11:00-12:00</li>
             </ul>
           </li>
           <li *ngIf="data.kind === 3">
-            Artístico:
+            <b>Artístico:</b>
             <ul>
               <li>Aún no hemos abierto grupo, Contacta con nosotros!</li>
             </ul>
@@ -68,8 +68,36 @@
       </div>
       <div>
         <h3>Tarifas</h3>
-        <div class="row">
-          <div class="caption col mx-5 my-3 my-3 border rounded p-3 text-center">
+        <div *ngIf="data.kind === 0" class="row">
+          <div class="col mx-5 my-3 my-3 border rounded p-3 text-center">
+            <h5>Mensual</h5>
+            <p>4 horas</p>
+            <hr>
+            <span>30 €</span>
+          </div>
+          <div class="col mx-5 my-3 border rounded p-3 text-center">
+            <div class="best-offer"></div>
+            <h5>Mensual</h5>
+            <p>8 horas</p>
+            <hr>
+            <span>50 €</span>
+          </div>
+          <div class="col mx-5 my-3 border rounded p-3 text-center">
+            <h5>Trimestral</h5>
+            <p>4 horas</p>
+            <hr>
+            <span>85 €</span>
+          </div>
+          <div class="col mx-5 my-3 border rounded p-3 text-center">
+            <div class="best-offer"></div>
+            <h5>Trimestral</h5>
+            <p>8 horas</p>
+            <hr>
+            <span>145 €</span>
+          </div>
+        </div>
+        <div *ngIf="data.kind !== 0" class="row">
+          <div class="col mx-5 my-3 my-3 border rounded p-3 text-center">
             <h5>Mensual</h5>
             <p>4 horas</p>
             <hr>
