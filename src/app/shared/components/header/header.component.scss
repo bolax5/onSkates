@@ -1,7 +1,10 @@
 @import "../../../../assets/styles/colors.scss";
 .bg-main{
-  background-image: linear-gradient(#f8f9fa00, #6ec9d552), url("../../../../assets/img/random_grey_variations.png");
+  // background-image: linear-gradient(#f8f9fa00, #6ec9d552), url("../../../../assets/img/random_grey_variations.png");
   height: 100%;
+  background-color: white;
+  border-bottom: solid #6dc9d5;
+  color: #0498b1;
 }
 :host {
   position: fixed;
