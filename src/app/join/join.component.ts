@@ -48,7 +48,7 @@ export class JoinComponent {
         `Mi email es ${email} y mi teléfono ${phone}.%0D%0A` +
         `${comments}%0D%0A` +
         `Gracias!`;
-      const emailLink = `mailto:info@onskates.com?subject=Inscripcion&body=${mailTemplate}`;
+      const emailLink = `mailto:info@escuelaonskates.com?subject=Inscripcion&body=${mailTemplate}`;
       const mailLink = document.createElement('a');
       mailLink.href = emailLink;
       mailLink.click();
